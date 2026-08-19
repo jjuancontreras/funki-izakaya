@@ -1,0 +1,253 @@
+{
+  "brand": {
+    "name": "Funki Izakaya",
+    "tagline": "Modern Yakitoria — モダン焼き鳥屋",
+    "voice": "Casual, fun, izakaya-street-food energy — Tokyo alley meets QC food-park hangout",
+    "social": {
+      "instagram": "https://www.instagram.com/funkiizakaya/",
+      "instagramHandle": "@funkiizakaya",
+      "tiktok": "https://www.tiktok.com/@funkiizakaya",
+      "tiktokHandle": "@funkiizakaya",
+      "facebook": "https://www.facebook.com/FunkiIzakaya/",
+      "facebookHandle": "FunkiIzakaya",
+      "threads": "https://www.threads.com/@funkiizakaya"
+    },
+    "email": "hello@funkiph.com",
+    "logo": {
+      "source": "instagram profile picture (real brand asset)",
+      "rawFile": "assets/raw/profile-pic.jpg",
+      "note": "Only 150x150 available from IG — needs Higgsfield upscale before use as site logo. Wordmark reads 'FUNKI IZAKAYA / MODERN YAKITORIA モダン焼き鳥屋' in white/red on black, brush-stroke chopstick accents."
+    }
+  },
+  "branches": [
+    {
+      "id": "katipunan",
+      "name": "Funki Izakaya — Pop-Up Katipunan",
+      "shortName": "Katipunan",
+      "address": "273 Katipunan Ave, corner Xavierville Ave, Quezon City (inside The Pop-Up Katipunan food park, near Ateneo & Miriam College)",
+      "phone": "+63 917 139 9977",
+      "phoneDisplay": "0917 139 9977",
+      "hours": "Estimated 9:00 AM – 2:00 AM Mon–Sat, 9:00 AM – 12:00 AM Sun (shared food-park hours — VERIFY exact stall hours with venue before publishing)",
+      "hoursVerified": false,
+      "mapQuery": "The Pop-Up Katipunan, 273 Katipunan Ave, Quezon City",
+      "menuStyle": "bar-grill",
+      "notes": "Original branch, bar/grill concept — yakitori rice meals, single sticks, party platters, drink towers/buckets, full liquor menu, Funki Slink Alcoslushies."
+    },
+    {
+      "id": "masinag",
+      "name": "Funki Izakaya — Masinag",
+      "shortName": "Masinag",
+      "address": "Unit 104, Maxfill Commercial Center, Marcos Highway, Masinag, Antipolo",
+      "phone": "+63 917 165 4980",
+      "phoneDisplay": "0917 165 4980",
+      "hours": "10:30 AM – 10:00 PM daily",
+      "hoursVerified": true,
+      "mapQuery": "Maxfill Commercial Center, Marcos Highway, Antipolo",
+      "menuStyle": "full-izakaya",
+      "notes": "Full sit-down izakaya menu — starters, domburi, yakitoridon, sushi rolls/sashimi, a la carte, ramen & noodles, platter sets, desserts."
+    },
+    {
+      "id": "blueridge",
+      "name": "Funki Izakaya — Blue Ridge",
+      "shortName": "Blue Ridge",
+      "address": "2nd Floor, Blue Ridge A, 226 Katipunan Ave, Project 4, Quezon City (beside Arton Strip, near Kopi Roti, corner Boni Serrano/Aurora Blvd/Highland Dr)",
+      "phone": "+63 956 239 3341",
+      "phoneDisplay": "0956 239 3341",
+      "hours": "11:00 AM – 11:00 PM daily",
+      "hoursVerified": true,
+      "mapQuery": "Blue Ridge A, 226 Katipunan Ave, Project 4, Quezon City",
+      "menuStyle": "full-izakaya",
+      "notes": "Newest branch — soft-opened Dec 14, 2025. Also available via GrabFood. Assumed same full-izakaya menu as Masinag; confirm before publishing since it's a different building/format than the Katipunan bar concept."
+    }
+  ],
+  "menu": {
+    "categories": [
+      {
+        "id": "starters",
+        "name": "Starters",
+        "items": [
+          { "name": "Gyoza", "price": 200 },
+          { "name": "Potato Truffle Strings", "price": 190 },
+          { "name": "Edamame", "price": 120 },
+          { "name": "Miso Soup", "price": 90 },
+          { "name": "Kyuri Salad", "price": 180 },
+          { "name": "Kani Salad", "price": 180 },
+          { "name": "Spicy Seafood Salad", "price": 300 },
+          { "name": "Wakame Salad", "price": 200 },
+          { "name": "Seafood Dumplings", "price": 200 }
+        ]
+      },
+      {
+        "id": "domburi",
+        "name": "Domburi (Rice Bowls)",
+        "items": [
+          { "name": "Katsudon", "price": 290, "tags": ["best-seller"] },
+          { "name": "Oyakodon", "price": 290 },
+          { "name": "Teriyakidon", "price": 250 },
+          { "name": "Katsu Curry (Chicken/Pork)", "price": 300, "tags": ["best-seller"] },
+          { "name": "Gyudon", "price": 350 },
+          { "name": "Spamudon", "price": 250 },
+          { "name": "Namazu Kabayaki", "price": 290 },
+          { "name": "Wagyudon", "price": 350 },
+          { "name": "Chirashidon", "price": 320 },
+          { "name": "Salmondon", "price": 350 },
+          { "name": "Ebi Fry", "price": 380 }
+        ]
+      },
+      {
+        "id": "yakitoridon",
+        "name": "Yakitori Rice Meals",
+        "items": [
+          { "name": "RM1 — Chicken thigh, pork belly, quail egg bacon", "price": 195 },
+          { "name": "RM2 — Chicken thigh, pork belly, Taiwan sausage", "price": 195 },
+          { "name": "RM3 — Chicken thigh, 2 pork belly", "price": 200 },
+          { "name": "RM4 — 2 chicken thigh, pork belly", "price": 200 },
+          { "name": "RM5 — Taiwan sausage, Japanese sausage, sliced longganisa", "price": 215 }
+        ]
+      },
+      {
+        "id": "sushi",
+        "name": "Sushi Rolls & Sashimi",
+        "items": [
+          { "name": "California Maki", "price": 180, "tags": ["signature"] },
+          { "name": "Funki Roll (Salmon, kani, cream cheese)", "price": 300 },
+          { "name": "Spicy Salmon Roll", "price": 300 },
+          { "name": "Crunchy Bacon Roll", "price": 320 },
+          { "name": "Truffle Wagyu Maki", "price": 320 },
+          { "name": "Namazu Maki", "price": 250 },
+          { "name": "Cali Chizu", "price": 250 },
+          { "name": "Dragon Dance (Dancing Dragon Roll)", "price": 320, "tags": ["signature"] },
+          { "name": "Yellow Submarine", "price": 250 },
+          { "name": "Crispy Rice Tuna", "price": 270 },
+          { "name": "Sunset Roll", "price": 280 },
+          { "name": "Salmon Crunch Roll", "price": 320 },
+          { "name": "Sashimi Plate (Salmon, tuna, tamago)", "price": 450 }
+        ]
+      },
+      {
+        "id": "alacarte",
+        "name": "A La Carte",
+        "items": [
+          { "name": "Chicken Teriyaki", "price": 220 },
+          { "name": "Tempura", "price": 210 },
+          { "name": "Classic Karaage", "price": 200 },
+          { "name": "Soy-Glazed Karaage", "price": 200 },
+          { "name": "Chicken Teppan", "price": 280 },
+          { "name": "Seafood Teppan", "price": 380 },
+          { "name": "Tofu Agedashi", "price": 150 },
+          { "name": "Yasai Itame", "price": 180 },
+          { "name": "Sakana Chizu", "price": 270 }
+        ]
+      },
+      {
+        "id": "ramen",
+        "name": "Ramen & Noodles",
+        "items": [
+          { "name": "Shoyu Ramen", "price": 390 },
+          { "name": "Hakata Ramen", "price": 390 },
+          { "name": "Tantanmen Ramen", "price": 390, "tags": ["spicy"] },
+          { "name": "Gomoku Ramen", "price": 430 },
+          { "name": "Chicken Paitan Ramen", "price": 390 },
+          { "name": "Sukiyaki", "price": 350 },
+          { "name": "Yaki Udon", "price": 280 },
+          { "name": "Tempura Udon", "price": 400 },
+          { "name": "Beef Steak Udon", "price": 320 }
+        ],
+        "note": "Ramen is dine-in only."
+      },
+      {
+        "id": "sticks",
+        "name": "Yakitori Sticks",
+        "items": [
+          { "name": "Angus Beef Bacon", "price": 78 },
+          { "name": "Bacon Enoki", "price": 65 },
+          { "name": "Chicken Breast", "price": 65 },
+          { "name": "Chicken Thigh", "price": 65 },
+          { "name": "Corn", "price": 38 },
+          { "name": "Japanese Sausage", "price": 95 },
+          { "name": "Pork Belly", "price": 65 },
+          { "name": "Quail Egg Bacon", "price": 58 },
+          { "name": "Shitake Mushroom", "price": 58 },
+          { "name": "Shrimps", "price": 95 },
+          { "name": "Sliced Longganisa", "price": 58 },
+          { "name": "Taiwan Sausage", "price": 58 },
+          { "name": "Wagyu Cubes", "price": 110, "tags": ["best-seller"] }
+        ]
+      },
+      {
+        "id": "platters",
+        "name": "Platter Sets",
+        "items": [
+          { "name": "Yaki Ichi — 10-stick sampler", "price": 700 },
+          { "name": "Yaki Ni — 5 sticks (wagyu, chicken, pork belly, quail egg bacon, Taiwan sausage)", "price": 335 },
+          { "name": "Yaki San — 5 sticks", "price": 285 },
+          { "name": "Yaki Shi — 5 sticks", "price": 315 },
+          { "name": "Yaki Go — 5 sticks", "price": 285 },
+          { "name": "Yaki Roku — 5 sticks", "price": 345 },
+          { "name": "Yakitori Sampler Party Platter — 33 sticks", "price": 2095, "note": "Katipunan branch only" },
+          { "name": "Funki Recommended — 30 sticks", "price": 1980, "note": "Katipunan branch only" },
+          { "name": "Funki Meat Lovers — 30 sticks", "price": 2050, "note": "Katipunan branch only" },
+          { "name": "Funki Healthy or Not — 30 sticks", "price": 1700, "note": "Katipunan branch only" }
+        ]
+      },
+      {
+        "id": "rice-dessert",
+        "name": "Rice & Dessert",
+        "items": [
+          { "name": "Plain Rice", "price": 40 },
+          { "name": "Chahan (Fried Rice)", "price": 150 },
+          { "name": "Ebi Chahan", "price": 200 },
+          { "name": "Strawberry Kakigori", "price": 120 },
+          { "name": "Dezāto Gyoza (Banana Biscoff / Mango Nutella)", "price": 200 }
+        ]
+      },
+      {
+        "id": "drinks",
+        "name": "Drinks",
+        "items": [
+          { "name": "Funki Slink Alcoslushie (Narita Freeze / Fuji Frost / Sakura Slush)", "price": 180, "tags": ["signature"] },
+          { "name": "Bottled Water", "price": 30 },
+          { "name": "Soda in Can", "price": 60 },
+          { "name": "Iced Tea", "price": 120 },
+          { "name": "Iced Matcha", "price": 150 },
+          { "name": "Brewed Coffee", "price": 80 },
+          { "name": "Red Bull", "price": 150 }
+        ]
+      },
+      {
+        "id": "beer-liquor",
+        "name": "Beer, Liquor & Bundles",
+        "items": [
+          { "name": "San Mig / Pale Pilsen / Red Horse", "price": 120 },
+          { "name": "Hoegaarden / Heineken / Budweiser", "price": 130 },
+          { "name": "Asahi / Sapporo / Kirin Ichiban", "price": 180 },
+          { "name": "5+1 Bucket", "price": 600 },
+          { "name": "Bottles (Jack Daniels, Jameson, Absolut, etc.)", "priceRange": "1,700–2,600" }
+        ],
+        "note": "Katipunan branch skews bar-forward with drink towers/bundles (e.g. 'All Time Fave' P2,030, 'Triple Tower Power' P1,380); full bottle list available on request."
+      }
+    ],
+    "disclaimer": "Prices in PHP, sourced from public delivery-platform listings (Booky) as of the site's build date — subject to change without notice. Confirm current pricing before publishing final menu."
+  },
+  "assets": {
+    "rawFolder": "assets/raw",
+    "generatedFolder": "assets/generated",
+    "collected": [
+      { "file": "profile-pic.jpg", "type": "logo", "usage": "Real brand wordmark — needs Higgsfield upscale (only 150x150 source available)" },
+      { "file": "food-sashimi-jun04.jpg", "type": "real-photo", "usage": "Sushi/sashimi platter — hero/menu candidate" },
+      { "file": "food-noodles-jun12.jpg", "type": "real-photo", "usage": "Noodles dish — menu/gallery candidate" },
+      { "file": "food-ramen-jul09.jpg", "type": "real-photo", "usage": "Katsudon-style rice bowl in natural light — strong hero candidate" },
+      { "file": "food-ramen-may22.jpg", "type": "real-photo", "usage": "Ramen with egg/roe — menu candidate" },
+      { "file": "food-sushi-may29.jpg", "type": "real-photo", "usage": "Sushi/rice dish — menu candidate" },
+      { "file": "food-carousel-dec16.jpg", "type": "real-photo", "usage": "Carousel post image — general use" },
+      { "file": "post-2026-01-24.jpg", "type": "reference-only", "usage": "Blue Ridge location map graphic — NOT a food photo, useful only as a locations-page reference, not for enhancement" }
+    ],
+    "note": "Only 6 usable food photos pulled so far (IG requires login to scroll further). Can pull more from @funkiizakaya if a fuller shoot is needed."
+  },
+  "openItemsToConfirm": [
+    "Katipunan Pop-Up exact stall hours (currently estimated from shared food-park hours)",
+    "Whether Blue Ridge menu truly matches Masinag's full-izakaya menu or has its own pricing",
+    "Current menu prices (sourced from Booky, may have changed)",
+    "Higher-resolution logo file if the owner has one (source pulled here is only 150x150)"
+  ]
+}

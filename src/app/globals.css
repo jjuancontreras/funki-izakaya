@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  --color-ink: #0a0908;
+  --color-ink-soft: #141210;
+  --color-charcoal: #1c1917;
+  --color-charcoal-light: #29241f;
+  --color-brand: #f0262d;
+  --color-brand-dim: #8f1a1e;
+  --color-cream: #f7f2e7;
+  --color-cream-dim: #cfc7b8;
+  --color-ember: #ffb020;
+  --color-spice: #ff6b35;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-charcoal: var(--color-charcoal);
+  --color-charcoal-light: var(--color-charcoal-light);
+  --color-brand: var(--color-brand);
+  --color-brand-dim: var(--color-brand-dim);
+  --color-cream: var(--color-cream);
+  --color-cream-dim: var(--color-cream-dim);
+  --color-ember: var(--color-ember);
+  --color-spice: var(--color-spice);
+  --font-display: var(--font-anton);
+  --font-body: var(--font-inter);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-ink);
+  color: var(--color-cream);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--color-brand);
+  color: var(--color-cream);
+}
+
+.text-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+.brush-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.brush-underline::after {
+  content: "";
+  position: absolute;
+  left: -4%;
+  right: -4%;
+  bottom: -0.18em;
+  height: 0.22em;
+  background: linear-gradient(90deg, transparent, var(--color-brand) 15%, var(--color-brand) 85%, transparent);
+  border-radius: 999px;
+  transform: skewX(-8deg);
+}
+
+@keyframes ember-drift {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120px) translateX(20px);
+    opacity: 0;
+  }
+}
+
+.animate-ember {
+  animation: ember-drift 4s ease-in infinite;
 }

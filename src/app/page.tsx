@@ -1,65 +1,148 @@
 import Image from "next/image";
+import Link from "next/link";
+import Hero from "@/components/Hero";
+import AnimatedSection from "@/components/AnimatedSection";
+import BranchCard from "@/components/BranchCard";
+import ParallaxImage from "@/components/ParallaxImage";
+import { branches, brand } from "@/lib/content";
+import { btnPrimary } from "@/lib/styles";
+
+const featuredDishes = [
+  {
+    name: "Katsudon",
+    description: "Crispy pork cutlet simmered in savory-sweet egg over rice.",
+    price: "₱290",
+    image: "/images/food/katsudon-bowl.jpg",
+  },
+  {
+    name: "California Maki",
+    description: "Kani, mango, and cucumber rolled fresh daily.",
+    price: "₱180",
+    image: "/images/food/sashimi-roll.jpg",
+  },
+  {
+    name: "Tantanmen Ramen",
+    description: "Creamy sesame-chili broth with spicy stir-fried pork.",
+    price: "₱390",
+    image: "/images/food/ramen.jpg",
+  },
+  {
+    name: "Wagyu Yakitori",
+    description: "Wagyu cubes grilled over binchotan charcoal.",
+    price: "₱110",
+    image: "/images/brand/hero-yakitori-grill-macro.jpg",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <Hero />
+
+      <AnimatedSection className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand">
+            Fan Favorites
           </p>
+          <h2 className="text-display mt-2 text-4xl text-cream sm:text-5xl">Featured Dishes</h2>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {featuredDishes.map((dish, i) => (
+            <AnimatedSection
+              key={dish.name}
+              delay={i * 0.1}
+              className="group overflow-hidden rounded-xl border border-white/10 bg-charcoal/60"
+            >
+              <div className="relative aspect-square overflow-hidden">
+                <Image
+                  src={dish.image}
+                  alt={dish.name}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div className="p-4">
+                <div className="flex items-center justify-between">
+                  <h3 className="font-semibold text-cream">{dish.name}</h3>
+                  <span className="text-sm font-semibold text-brand">{dish.price}</span>
+                </div>
+                <p className="mt-1 text-sm text-cream-dim">{dish.description}</p>
+              </div>
+            </AnimatedSection>
+          ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            href="/menu"
+            className="inline-block rounded-full border border-cream/30 px-7 py-3 text-sm font-semibold uppercase tracking-wider text-cream transition-colors hover:border-brand hover:text-brand"
+          >
+            See Full Menu
+          </Link>
+        </div>
+      </AnimatedSection>
+
+      <AnimatedSection className="relative overflow-hidden py-20">
+        <ParallaxImage
+          src="/images/brand/texture-brushstroke.jpg"
+          alt=""
+          className="object-cover opacity-30"
+        />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand">
+              Three Branches, One Funki Energy
+            </p>
+            <h2 className="text-display mt-2 text-4xl text-cream sm:text-5xl">Find Your Branch</h2>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {branches.map((branch, i) => (
+              <AnimatedSection key={branch.id} delay={i * 0.1}>
+                <BranchCard branch={branch} />
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </AnimatedSection>
+
+      <AnimatedSection className="mx-auto max-w-4xl px-4 py-20 text-center sm:px-6">
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand">
+          {brand.social.instagramHandle}
+        </p>
+        <h2 className="text-display mt-2 text-4xl text-cream sm:text-5xl">Follow the Funki</h2>
+        <p className="mx-auto mt-4 max-w-xl text-cream-dim">
+          Catch our latest drops, behind-the-grill moments, and branch updates on socials.
+        </p>
+        <div className="mt-6 flex flex-wrap justify-center gap-4">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href={brand.social.instagram}
             target="_blank"
             rel="noopener noreferrer"
+            className={btnPrimary()}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            Instagram
           </a>
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href={brand.social.tiktok}
             target="_blank"
             rel="noopener noreferrer"
+            className="rounded-full border border-cream/30 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-cream transition-colors hover:border-brand hover:text-brand"
           >
-            Documentation
+            TikTok
+          </a>
+          <a
+            href={brand.social.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-cream/30 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-cream transition-colors hover:border-brand hover:text-brand"
+          >
+            Facebook
           </a>
         </div>
-      </main>
-    </div>
+      </AnimatedSection>
+    </>
   );
 }
